@@ -23,7 +23,7 @@
 
 ## 출력 위치
 
-- **디폴트**: `~/workspace/backend-jobs-brief/{weekly|monthly}/<filename>.md`
+- **디폴트**: `~/workspace/wooksang-marketplace-documents/backend-jobs-brief/{weekly|monthly}/<filename>.md`
 - **사용자 설정**: `~/.claude/data/backend-jobs-brief/config.json`의 `output_dir` 필드로 오버라이드
 
 ```json

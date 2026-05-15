@@ -23,15 +23,17 @@ description: 한국 IT 백엔드/서버/인프라(SRE·DevOps·Platform·Cloud) 
 
 ## 출력 위치
 
-기본 경로: `~/workspace/backend-jobs-brief/{weekly|monthly}/<filename>.md` (오늘 한국 날짜 기준).
+기본 경로: `~/workspace/wooksang-marketplace-documents/backend-jobs-brief/{weekly|monthly}/<filename>.md` (오늘 한국 날짜 기준).
+
+wooksang-marketplace 플러그인들이 생성한 모든 문서는 `~/workspace/wooksang-marketplace-documents/<plugin>/` 하위로 모입니다. 이 skill은 `backend-jobs-brief` 디렉토리를 사용합니다.
 
 ### 경로 결정 절차
-1. `~/.claude/data/backend-jobs-brief/config.json`이 있고 `output_dir` 필드가 존재하면 그 값을 우선 사용 (예: `~/Documents/obsidian/backend-jobs`)
+1. `~/.claude/data/backend-jobs-brief/config.json`이 있고 `output_dir` 필드가 존재하면 그 값을 우선 사용 (사용자가 명시적으로 별도 위치를 원하는 경우만)
 2. 없으면 기본 경로 사용
-3. 디렉토리가 없으면 먼저 `mkdir -p`로 생성
+3. 디렉토리가 없으면 먼저 `mkdir -p`로 생성 (예: `mkdir -p ~/workspace/wooksang-marketplace-documents/backend-jobs-brief/weekly`)
 4. 같은 주차/월 파일이 이미 존재하면 덮어쓰지 않고 `<filename>-HHMM.md` 형태로 시간 suffix
 
-### config.json 예시
+### config.json 예시 (선택적 오버라이드)
 ```json
 {
   "output_dir": "~/Documents/obsidian/backend-jobs"
